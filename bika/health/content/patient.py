@@ -667,6 +667,46 @@ schema = Person.schema.copy() + Schema((
             label=_('Insurance Number'),
         ),
     ),
+    
+    ReferenceField(
+        'InsuranceCompany',
+        vocabulary='get_insurancecompanies',
+        allowed_types=('InsuranceCompany',),
+        relationship='InsuranceCompany',
+        required=False,
+        widget=SelectionWidget(
+            format='select',
+            label=_('Primary Insurance Company'),
+            ),
+        ),
+    StringField(
+        'InsuranceNumber',
+        searchable=1,
+        required=0,
+        widget=StringWidget(
+            label=_('Primary Insurance Number'),
+        ),
+    ),
+    
+    ReferenceField(
+        'InsuranceCompanySecondary',
+        vocabulary='get_insurancecompanies',
+        allowed_types=('InsuranceCompany',),
+        relationship='InsuranceCompanySecondary',
+        required=False,
+        widget=SelectionWidget(
+            format='select',
+            label=_('Secondary Insurance Company'),
+            ),
+        ),
+    StringField(
+        'InsuranceNumberSecondary',
+        searchable=1,
+        required=0,
+        widget=StringWidget(
+            label=_('Secondary Insurance Number'),
+        ),
+    ),
     BooleanField(
         'InvoiceToInsuranceCompany',
         default=False,
