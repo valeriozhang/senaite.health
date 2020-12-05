@@ -656,26 +656,6 @@ schema = Person.schema.copy() + Schema((
         required=False,
         widget=SelectionWidget(
             format='select',
-            label=_('Insurance Company'),
-            ),
-        ),
-    StringField(
-        'InsuranceNumber',
-        searchable=1,
-        required=0,
-        widget=StringWidget(
-            label=_('Insurance Number'),
-        ),
-    ),
-    
-    ReferenceField(
-        'InsuranceCompany',
-        vocabulary='get_insurancecompanies',
-        allowed_types=('InsuranceCompany',),
-        relationship='InsuranceCompany',
-        required=False,
-        widget=SelectionWidget(
-            format='select',
             label=_('Primary Insurance Company'),
             ),
         ),
@@ -705,6 +685,26 @@ schema = Person.schema.copy() + Schema((
         required=0,
         widget=StringWidget(
             label=_('Secondary Insurance Number'),
+        ),
+    ),
+    
+    ReferenceField(
+        'InsuranceCompanyTertiary',
+        vocabulary='get_insurancecompanies',
+        allowed_types=('InsuranceCompany',),
+        relationship='InsuranceCompanyTertiary',
+        required=False,
+        widget=SelectionWidget(
+            format='select',
+            label=_('Tertiary Insurance Company'),
+            ),
+        ),
+    StringField(
+        'InsuranceNumberTertiary',
+        searchable=1,
+        required=0,
+        widget=StringWidget(
+            label=_('Tertiary Insurance Number'),
         ),
     ),
     BooleanField(
