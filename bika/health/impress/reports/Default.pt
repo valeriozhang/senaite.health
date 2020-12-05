@@ -252,36 +252,133 @@
           <col style="width: 32%">
         </colgroup>
         <tr>
-          <td>
+          <td style="width:33%">
             <table style="border:1px solid black">
               <tr>
-                <td colspan="2">
-                  Patient Information
+                <td colspan="3" style="border:none;background-color: lightgreen;">
+                  <span><b>Patient Information</b></span>
+                </td>
+              </tr>
+              <tr>
+                 <td colspan="3" style="border:none;">
+                   <span><b>LIU, LESLIE</b></span>
+                </td>
+              </tr>
+              <tr>
+                 <td style="border:none;">
+                   <span><b>Age:</b></span><span>16</span>
+                </td>
+                <td style="border:none;">
+                  <span><b>Sex:</b></span><span>Female</span>
+                </td>
+                <td style="border:none;">
+                  <span><b>Date:</b></span><span>11/12/2020</span>
+                </td>
+              </tr>
+              <tr>
+                 <td colspan="3" style="border:none;">
+                   <span><b>Phone:</b></span><span>1234567890</span>
+                </td>
+              </tr>
+              <tr>
+                 <td colspan="3" style="border:none;">
+                   <span><b>Chart #:</b></span><span>1234567890</span>
+                </td>
+              </tr>
+                <tr>
+                 <td colspan="3" style="border:none;">
+                   <span>&nbsp;</span>
                 </td>
               </tr>
             </table>
           </td>
-          <td>
+          <td style="width:34%">
              <table style="border:1px solid black">
               <tr>
-                <td colspan="2">
-                  Physician Information
+                <td colspan="2" style="border:none;background-color: lightgreen;">
+                  <span><b>Physician Information</b></span>
+                </td>
+              </tr>
+              <tr>
+                 <td colspan="2" style="border:none;">
+                   <span><b>YENFENG CHEN Physician, P.C</b></span>
+                </td>
+              </tr>
+              <tr>
+                 <td colspan="2" style="border:none;">
+                   <span>5517 7th Avenue</span>
+                </td>
+              </tr>
+              <tr>
+                 <td colspan="2" style="border:none;">
+                   <span>BROOKLYN, NY 11220</span>
+                </td>
+              </tr>
+              <tr>
+                 <td style="border:none;">
+                   <span>Tel<b>#</b>:</span><span><b>(718)871-8255</b></span>
+               </td>
+                <td style="border:none;">
+                   <span>Fax<b>#</b>:</span><span><b>(718)871-8255</b></span>
+               </td>
+              </tr>
+              <tr>
+                 <td style="border:none;">
+                   <span><b>Referring Physician:</b></span>
+                </td>
+                <td style="border:none;">
+                   <span>&nbsp;</span>
                 </td>
               </tr>
             </table>
           </td>
-          <td>
+          <td style="width:33%">
              <table style="border:1px solid black">
               <tr>
-                <td colspan="2">
-                  Sample Information
+                <td colspan="2" style="border:none;background-color: lightgreen;">
+                  <span><b>Specimen Information</b></span>
                 </td>
               </tr>
+              <tr>
+                 <td style="border:none;">
+                   <span><b>Accession #</b></span>
+                </td>
+                <td style="border:none;">
+                   <span>123456789</span>
+                </td>
+              </tr>
+              <tr>
+                 <td style="border:none;">
+                   <span><b>Date Collected:</b></span>
+                </td>
+                <td style="border:none;">
+                   <span>11/12/2020</span>
+                </td>
+              </tr>
+              <tr>
+                 <td style="border:none;">
+                   <span><b>Date Received:</b></span>
+                </td>
+                <td style="border:none;">
+                   <span>11/12/2020</span>
+                </td>
+              </tr>
+              <tr>
+                 <td style="border:none;">
+                   <span><b>Date Reported:</b></span>
+                </td>
+                <td style="border:none;">
+                   <span>11/12/2020</span>
+                </td>
+              </tr>
+                <tr>
+                <td colspan="2" style="border:none;">
+                   <span>&nbsp;</span>
+                </td>
+                </tr>
             </table>
           </td>
         </tr>
-       
-            
       </table>
     </div>
   </div>
