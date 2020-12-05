@@ -239,6 +239,55 @@
   </div>
   </tal:render>
 
+<div class="row section-info no-gutters">
+    <div class="w-100">
+      <!-- Client Info -->
+      <table class="table table-sm table-condensed w-100">
+        <colgroup>
+          <!-- Client Address -->
+          <col style="width: 36%;">
+          <!-- Lab Address -->
+          <col style="width: 32%">
+          <!-- Accreditation Logo -->
+          <col style="width: 32%">
+        </colgroup>
+        <tr>
+          <td>
+            <table style="border:1px solid black">
+              <tr>
+                <td colspan="2">
+                  Patient Information
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td>
+             <table style="border:1px solid black">
+              <tr>
+                <td colspan="2">
+                  Physician Information
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td>
+             <table style="border:1px solid black">
+              <tr>
+                <td colspan="2">
+                  Sample Information
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+       
+            
+      </table>
+    </div>
+  </div>
+        
+            
+      
   <!-- ALERTS -->
   <tal:render condition="python:True">
     <div class="row section-alerts no-gutters">
