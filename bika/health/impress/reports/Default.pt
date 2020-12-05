@@ -242,20 +242,20 @@
 <div class="row section-info no-gutters">
     <div class="w-100">
       <!-- Client Info -->
-      <table class="table table-sm table-condensed w-100">
+      <table class="table table-sm table-condensed w-100" style="font-size:7pt;">
         <colgroup>
           <!-- Client Address -->
-          <col style="width: 36%;">
+          <col style="width: 33%;">
           <!-- Lab Address -->
-          <col style="width: 32%">
+          <col style="width: 34%">
           <!-- Accreditation Logo -->
-          <col style="width: 32%">
+          <col style="width: 33%">
         </colgroup>
         <tr>
           <td style="width:33%">
-            <table style="border:1px solid black">
+            <table style="border:1px solid black;width:100%;">
               <tr>
-                <td colspan="3" style="border:none;background-color: lightgreen;">
+                <td colspan="3" style="border:none;background-color: #8ce98c;">
                   <span><b>Patient Information</b></span>
                 </td>
               </tr>
@@ -293,9 +293,9 @@
             </table>
           </td>
           <td style="width:34%">
-             <table style="border:1px solid black">
+             <table style="border:1px solid black;width:100%;">
               <tr>
-                <td colspan="2" style="border:none;background-color: lightgreen;">
+                <td colspan="2" style="border:none;background-color: #8ce98c;">
                   <span><b>Physician Information</b></span>
                 </td>
               </tr>
@@ -333,9 +333,9 @@
             </table>
           </td>
           <td style="width:33%">
-             <table style="border:1px solid black">
+             <table style="border:1px solid black;width:100%;">
               <tr>
-                <td colspan="2" style="border:none;background-color: lightgreen;">
+                <td colspan="2" style="border:none;background-color: #8ce98c;">
                   <span><b>Specimen Information</b></span>
                 </td>
               </tr>
@@ -376,10 +376,10 @@
                    <span>&nbsp;</span>
                 </td>
                 </tr>
-            </table>
+           </table>
           </td>
         </tr>
-      </table>
+</table>
     </div>
   </div>
         
