@@ -287,7 +287,8 @@
               </tr>
               <tr>
                  <td colspan="3" style="border:none;">
-                   <span><b>Chart #:</b></span><span>1234567890</span>
+                   <span><b>Chart #:</b></span>
+                   <span tal:content="patient/ClientPatientID">Client Patient ID</span>
                 </td>
               </tr>
                 <tr>
@@ -411,82 +412,7 @@
   </tal:render>
 
   <!-- PATIENT INFO -->
-  <tal:render condition="patient">
-    <div class="row section-summary no-gutters">
-      <div class="w-100">
-        <!-- Barcode -->
-        <div class="text-center float-right barcode-container">
-          <div class="barcode"
-               data-code="code128"
-               data-showHRI="true"
-               data-barHeight="15"
-               data-addQuietZone="true"
-               tal:attributes="data-id model/getId">
-          </div>
-        </div>
-
-        <h1 i18n:translate="">Patient Information</h1>
-        <table class="table table-sm table-condensed">
-          <tr>
-            <td style="width:20%" class="label" i18n:translate="">Patient</td>
-            <td>
-              <a tal:content="patient/Title"
-                 tal:attributes="href patient/absolute_url;">
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td style="width:20%" class="label" i18n:translate="">Gender</td>
-            <td tal:content="patient/Gender|None"></td>
-          </tr>
-          <tr>
-            <td style="width:20%" class="label" i18n:translate="">Date of Birth</td>
-            <td tal:condition="python:patient.getBirthDate()">
-              <span tal:content="python:view.to_localized_time(patient.getBirthDate(), long_format=0)"></span>
-              <span tal:condition="patient/BirthDateEstimated|None" i18n:translate="">(estimated)</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="label" i18n:translate="">Patient Identifiers</td>
-            <td tal:define="pids python:patient.getPatientIdentifiers() or []">
-                <span tal:repeat="pid pids"
-                      tal:content="python:pid.get('Identifier','')"></span>
-            </td>
-          </tr>
-          <tr>
-            <td class="label" i18n:translate="">Address</td>
-            <td tal:define="country_state python: patient.getCountryState() or {};
-                            address python: country_state.get('address', '');
-                            city python: country_state.get('city', '');
-                            state python: country_state.get('state', '');
-                            zip python: country_state.get('zip', '');
-                            country python: country_state.get('country', '');
-                            tokens python: filter(None, [address, city, state, zip, country]);
-                            full_address python:', '.join(tokens);"
-                tal:content="full_address">
-            </td>
-          </tr>
-          <tr>
-            <td class="label" i18n:translate="">Phone (home)</td>
-            <td tal:content="patient/HomePhone|Nothing"></td>
-          </tr>
-          <tr>
-            <td class="label" i18n:translate="">Phone (mobile)</td>
-            <td tal:content="patient/MobilePhone|Nothing"></td>
-          </tr>
-          <tr>
-            <td class="label" i18n:translate="">Phone (mobile)</td>
-            <td>
-              <a tal:condition="patient/EmailAddress|Nothing"
-                 tal:content="patient/EmailAddress"
-                 tal:attributes="href python:'mailto:%s' % patient.getEmailAddress();"></a>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </tal:render>
-
+  
   <!-- Sample Information -->
   <tal:render condition="python:True"
               define="client model/Client;
