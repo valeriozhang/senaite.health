@@ -261,23 +261,28 @@
               </tr>
               <tr>
                  <td colspan="3" style="border:none;">
-                   <span><b>LIU, LESLIE</b></span>
+                    <span tal:content="patient/Title"> </span>
                 </td>
               </tr>
               <tr>
                  <td style="border:none;">
-                   <span><b>Age:</b></span><span>16</span>
+                   <span><b>Age:</b></span>
+                   <span tal:content="patient/Age"> </span>
                 </td>
                 <td style="border:none;">
-                  <span><b>Sex:</b></span><span>Female</span>
+                  <span><b>Sex:</b></span>
+                  <span tal:content="patient/Gender"> </span>
                 </td>
                 <td style="border:none;">
-                  <span><b>Date:</b></span><span>11/12/2020</span>
+                  <span><b>DoB:</b></span>
+                  
+                   <span tal:condition="python:patient.getBirthDate()" tal:content="python:view.to_localized_time(patient.getBirthDate(), long_format=0)"> Patient DoB</span>
                 </td>
               </tr>
               <tr>
                  <td colspan="3" style="border:none;">
-                   <span><b>Phone:</b></span><span>1234567890</span>
+                   <span><b>Phone:</b></span>
+                   <span tal:content="patient/HomePhone|Nothing">1234567890</span>
                 </td>
               </tr>
               <tr>
