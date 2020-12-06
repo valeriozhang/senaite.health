@@ -5,6 +5,7 @@
           client model/Client;
           contact model/Contact;
           patient model/Patient;
+          doctor model/Doctor;
           accredited_symbol string:★;
           outofrange_symbol string:⚠;
           footer python:view.get_footer_text();
@@ -239,6 +240,7 @@
   </div>
   </tal:render>
 
+ <!-- Patient , Doctor, Speciment Detail Blocks -->
 <div class="row section-info no-gutters">
     <div class="w-100">
       <!-- Client Info -->
@@ -252,6 +254,7 @@
           <col style="width: 33%">
         </colgroup>
         <tr>
+          <!-- PATIENT DETAILS-->
           <td style="width:33%">
             <table style="border:1px solid black;width:100%;">
               <tr>
@@ -298,6 +301,8 @@
               </tr>
             </table>
           </td>
+          
+          <!-- Physician Details -->
           <td style="width:34%">
              <table style="border:1px solid black;width:100%;">
               <tr>
@@ -307,22 +312,25 @@
               </tr>
               <tr>
                  <td colspan="2" style="border:none;">
-                   <span><b>YENFENG CHEN Physician, P.C</b></span>
+                   <span tal:content="doctor/Title" style="font-weight: bold">YENFENG CHEN Physician, P.C</span>
                 </td>
               </tr>
               <tr>
                  <td colspan="2" style="border:none;">
-                   <span>5517 7th Avenue</span>
+                   <span tal:replace="doctor/PostalAddress/address|nothing">5517 7th Avenue</span>
                 </td>
               </tr>
               <tr>
                  <td colspan="2" style="border:none;">
-                   <span>BROOKLYN, NY 11220</span>
+                   <span tal:replace="doctor/PostalAddress/city|nothing">BROOKLYN, NY</span>
+                   <span tal:replace="doctor/PostalAddress/city|nothing">11220</span>
+
                 </td>
               </tr>
               <tr>
                  <td style="border:none;">
-                   <span>Tel<b>#</b>:</span><span><b>(718)871-8255</b></span>
+                   <span>Tel<b>#</b>:</span>
+                   <span tal:content="doctor/HomePhone|Nothing" style="font-weight: bold">(718)871-8255<</span>
                </td>
                 <td style="border:none;">
                    <span>Fax<b>#</b>:</span><span><b>(718)871-8255</b></span>
