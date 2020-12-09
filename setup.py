@@ -10,7 +10,7 @@ from setuptools import setup, find_packages
 version = '1.2.4'
 
 setup(
-    name='senaite.health',
+    name='valer.health',
     version=version,
     description="SENAITE Health",
     long_description=open("README.rst").read() + "\n" +
@@ -25,9 +25,10 @@ setup(
         "Programming Language :: Python",
     ],
     keywords=['lims', 'lis', 'senaite', 'opensource', 'health'],
-    author="RIDING BYTES & NARALABS",
-    author_email="senaite@senaite.com",
-    url='https://github.com/senaite/senaite.health',
+    author="Valer Group LLC",
+    author_email="valerio.zhang@valer.us",
+    url="https://github.com/valeriozhang/senaite.health",
+    
     license='GPLv2',
     packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['bika'],
@@ -35,9 +36,9 @@ setup(
     zip_safe=False,
     install_requires=[
         "archetypes.schemaextender",
-        "senaite.lims>=1.3.4",
-        "senaite.lims<1.4.0",
-        "senaite.panic",
+        "valer.lims>=1.3.4",
+        "valer.lims<1.4.0",
+        "valer.panic",
     ],
     extras_require={
         'test': [
