@@ -12,7 +12,7 @@ version = '1.2.4'
 setup(
     name='valer.health',
     version=version,
-    description="SENAITE Health",
+    description="Valer Health",
     long_description=open("README.rst").read() + "\n" +
     open("CHANGES.rst").read() + "\n",
     # Get more strings from
@@ -24,7 +24,7 @@ setup(
         "Framework :: Zope2",
         "Programming Language :: Python",
     ],
-    keywords=['lims', 'lis', 'senaite', 'opensource', 'health'],
+    keywords=['lims', 'lis', 'senaite', 'opensource', 'health','Valer'],
     author="Valer Group LLC",
     author_email="valerio.zhang@valer.us",
     url="https://github.com/valeriozhang/senaite.health",
