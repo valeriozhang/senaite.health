@@ -112,27 +112,30 @@
   </tal:css>
 
   <!-- HEADER -->
-  <tal:render condition="python:True">
+  <tal:render condition="python:True" define="laboratory python:view.laboratory;">
     <div class="row section-header no-gutters">
       <!-- Header Table -->
       <div class="w-100 mb-2">
         <table class="w-100 mb-0 noborder">
           <colgroup>
-            <col style="width:50%"/>
-            <col style="width:50%;"/>
+            <col style="width:100%"/>
           </colgroup>
           <tr>
             <!-- Header Left -->
             <td class="align-middle text-left">
-              <h1 i18n:translate="">Analysis Report</h1>
+              <h1 i18n:translate="" tal:content="laboratory/Name">Lab Name</h1>
             </td>
-            <!-- Header Right -->
-            <td class="align-middle text-right">
-              <!--
-              <img class="logo"
-                   tal:attributes="src python:view.get_resource_url('logo_print.png')"/>
-              -->
-              &nbsp;
+            <td>
+              <span tal:content="laboratory/PhysicalAddress/address">Lab Street and Number</span>,
+              <span tal:content="laboratory/PhysicalAddress/city">Lab City</span>,
+              <span tal:content="laboratory/PhysicalAddress/zip">Lab ZIP</span>
+            </td>
+            <td>
+              <span i18n:translate="">Phone</span>
+              <span tal:content="laboratory/Phone">Lab Phone Number</span> &nbsp;
+              <span i18n:translate="">Phone</span>
+              <span tal:content="laboratory/Fax">Lab Fax Number</span>
+
             </td>
           </tr>
         </table>
