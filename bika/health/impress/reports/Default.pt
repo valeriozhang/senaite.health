@@ -49,7 +49,6 @@
 
   <tal:css>
     <style type="text/css">
-     .report {width:100%;}
      .report * { font: 9pt; }
      .report h1 { font-size: 140%; }
      .report h2 { font-size: 120%; }
