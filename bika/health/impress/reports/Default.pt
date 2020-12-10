@@ -129,7 +129,7 @@
           <tr>
             <td class="align-middle text-center" style="font-size:9pt;">
                <span tal:content="laboratory/PhysicalAddress/address">Lab Street and Number</span>,
-              <span tal:content="laboratory/PhysicalAddress/city">Lab City</span>,
+              <span tal:content="laboratory/PhysicalAddress/state">Lab State</span>,
               <span tal:content="laboratory/PhysicalAddress/zip">Lab ZIP</span>
             </td>
           </tr>
@@ -173,7 +173,7 @@
             <table style="width:100%;">
               <tr>
                 <td colspan="3" style="border:none;background: #8ce98c !important;">
-                  <span><b>Patient Information</b></span>
+                  <div style="background-color:lightblue;"><span><b>Patient Information</b></span></div>
                 </td>
               </tr>
               <tr>
