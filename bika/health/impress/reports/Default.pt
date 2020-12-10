@@ -151,9 +151,7 @@
     <!-- Clear Floats
          https://github.com/Kozea/WeasyPrint/issues/36
     -->
-    <div class="clearfix"></div>
-  </div>
-  </tal:render>
+  
 
  <!-- Patient , Doctor, Speciment Detail Blocks -->
 <div class="row section-info no-gutters">
