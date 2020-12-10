@@ -122,7 +122,7 @@
           </colgroup>
           <tr>
             <!-- Header Left -->
-            <td class="align-middle text-center">
+            <td class="align-middle text-center" style="color: blue;">
               <h1 i18n:translate="" tal:content="laboratory/Name">Lab Name</h1>
             </td>
           </tr>
@@ -136,9 +136,10 @@
           <tr>
             <td class="align-middle text-center" style="font-size:9pt;">
               <span i18n:translate="">Phone</span>
-              <span tal:content="laboratory/Phone">Lab Phone Number</span> &nbsp;
+              <span tal:content="laboratory/Phone">Lab Phone Number</span> &nbsp;&nbsp;&nbsp;
               <span i18n:translate="">Fax</span>
               <span tal:content="laboratory/Fax">Lab Fax Number</span>
+              <br/>
             </td>
           </tr>
         </table>
