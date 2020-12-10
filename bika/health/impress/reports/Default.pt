@@ -408,7 +408,10 @@
                       </span>
                     </td>
                     <td class="text-right">
-                      <span class="result" tal:content="structure python:model.get_formatted_result(analysis)">23</span>
+                      
+                      <span class="result" tal:condition="python:model.is_out_of_range(analysis)" style="color:red;font-weight:bold" tal:content="structure python:model.get_formatted_result(analysis)">23</span>
+                      <span class="result" tal:condition="python:not model.is_out_of_range(analysis)" tal:content="structure python:model.get_formatted_result(analysis)">23</span>
+                      
                     </td>
                    
                     <td class="specs">
