@@ -128,8 +128,11 @@
             </td>
             <!-- Header Right -->
             <td class="align-middle text-right">
+              <!--
               <img class="logo"
                    tal:attributes="src python:view.get_resource_url('logo_print.png')"/>
+              -->
+              &nbsp;
             </td>
           </tr>
         </table>
