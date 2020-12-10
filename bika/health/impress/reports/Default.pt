@@ -62,8 +62,8 @@
      .report table.nopadding td { padding: 0; }
      .report table td.label { padding-right: 0.3rem; font-weight: bold; }
      .report table { border-color: black; }
-     .report table td, .report table th { border-top: 1px solid black; border-bottom: 1px solid black; }
-     .report table th { border-bottom: 1px solid black; }
+     .report table td, .report table th {}
+     .report table th {}
      .report table.range-table td { padding: 0 0.3rem 0 0; border: none; }
      .report .section-header h1 { font-size: 175%; }
      .report .section-header img.logo { height: 100px; margin: 20px 0; }
