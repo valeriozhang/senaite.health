@@ -611,49 +611,7 @@
   </tal:render>
 
   <!--  SIGNATURES -->
-  <tal:render condition="python:True">
-    <div class="row section-signatures no-gutters">
-      <div class="w-100">
-        <h1 i18n:translate="">Responsibles</h1>
-        <table class="table table-sm table-condensed">
-          <tr>
-            <tal:manager repeat="manager python:model.managers">
-              <td style="border:none">
-                <div>
-                  <img tal:condition="manager/Signature"
-                       tal:attributes="src string:${manager/absolute_url}/Signature" style="height:75px"/>
-                </div>
-                <div class="font-weight-bold">
-                  <span tal:content="manager/Salutation"></span>
-                  <span tal:condition="manager/Salutation">&nbsp;</span>
-                  <span tal:content="manager/Fullname"></span>
-                </div>
-                <div>
-                  <span tal:content="manager/JobTitle"></span>
-                </div>
-                <div>
-                  <span tal:content="manager/DefaultDepartment/title|nothing"></span>
-                </div>
-              </td>
-            </tal:manager>
-            <tal:reporter define="reporter python:view.current_user" condition="reporter">
-              <td style="border:none">
-                <div class="label" i18n:translate="">Published by</div>
-                <div>
-                  <span tal:content="reporter/fullname|reporter/username"></span>
-                  <tal:email tal:condition="reporter/email|nothing"
-                             tal:define="email reporter/email|nothing">
-                    (<a tal:content="email"
-                        tal:attributes="href string:mailto:${email}"></a>)
-                  </tal:email>
-                </div>
-              </td>
-            </tal:reporter>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </tal:render>
+  
 
   <!-- DISCREETER -->
   <tal:render condition="python:True"
@@ -722,23 +680,10 @@
         <tr>
           <td>
             <div>
-              <strong tal:content="laboratory/Name">Lab Name</strong>
-              • <span tal:content="laboratory/PhysicalAddress/address">Lab Street and Number</span>
-              • <span tal:content="laboratory/PhysicalAddress/zip">Lab ZIP</span>
-                <span tal:content="laboratory/PhysicalAddress/city">Lab City</span>
-              • <span tal:content="laboratory/PhysicalAddress/country">Lab Country</span>
+              
             </div>
             <div>
-              <span i18n:translate="">Phone</span>:
-              <span tal:content="laboratory/Phone">Lab Phone Number</span>
-              • <span i18n:translate="">Fax</span>:
-                <span tal:content="laboratory/Fax">Lab Fax Number</span>
-              • <a href="#" tal:attributes="href string:mailto:${laboratory/EmailAddress}">
-                <span tal:content="laboratory/EmailAddress">Lab Email</span>
-              </a>
-              • <a href="#" tal:attributes="href laboratory/LabURL">
-                <span tal:content="laboratory/LabURL">Lab URL</span>
-              </a>
+             
             </div>
           </td>
         </tr>
