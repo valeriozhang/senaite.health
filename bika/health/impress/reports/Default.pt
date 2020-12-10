@@ -343,8 +343,6 @@
   <tal:render condition="python:True">
     <div class="row section-results no-gutters">
       <div class="w-100">
-        <h1 i18n:translate="">Results</h1>
-
         <!-- Point of Capture -->
         <tal:poc define="analyses_by_poc python:view.get_analyses_by_poc(model);"
                  repeat="poc analyses_by_poc">
@@ -368,18 +366,23 @@
                 <col style="width: 5%">
               </colgroup>
               <thead>
+                <tr>
+                  <td colspan="5" style="font-size:10pt" class="text-left">
+                                        **** <span class="font-weight-bold" tal:content="category/Title">Category</span> ****
+                  </td>
+                </tr>
                 <tr class="small">
                   <th class="analysis">
-                    <span class="font-weight-bold" tal:content="category/Title">Category</span>
+                    <span class="text-left">Test Name</span>
                   </th>
                   <th class="text-right result">
                     <span i18n:translate="">Result</span>
                   </th>
                   <th class="text-left unit">
-                    <span i18n:translate="">Unit</span>
+                    <span i18n:translate="">Normal Range</span>
                   </th>
                   <th class="specs">
-                    <span i18n:translate="">Range</span>
+                    <span i18n:translate="">Unit</span>
                   </th>
                   <th class="outofrange">
                     <span i18n:translate=""></span>
@@ -405,14 +408,15 @@
                     <td class="text-right">
                       <span class="result" tal:content="structure python:model.get_formatted_result(analysis)">23</span>
                     </td>
-                    <td class="text-left text-muted font-italic">
-                      <span class="units" tal:content="structure python:model.get_formatted_unit(analysis)"></span>
-                    </td>
+                   
                     <td class="specs">
                       <span tal:condition="analysis/Uncertainty"
                             tal:content="structure python:model.get_formatted_uncertainty(analysis)"></span>
                       <span tal:content="python:'(RT)' if model.is_retest(analysis) else ''"></span>
                       <span tal:content="python:model.get_formatted_specs(analysis)">50 - 60</span>
+                    </td>
+                     <td class="text-left text-muted font-italic">
+                      <span class="units" tal:content="structure python:model.get_formatted_unit(analysis)"></span>
                     </td>
                     <td class="text-center align-middle">
                       <span tal:condition="python:model.is_out_of_range(analysis)"
