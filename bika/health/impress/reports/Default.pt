@@ -172,7 +172,7 @@
           <td style="width:33%;border:2px solid black;">
             <table style="width:100%;">
               <tr>
-                <td colspan="3" style="border:none;background-color: #8ce98c;">
+                <td colspan="3" style="border:none;background-color: #8ce98c !important;">
                   <span><b>Patient Information</b></span>
                 </td>
               </tr>
@@ -219,7 +219,7 @@
           <td style="width:34%;border:2px solid black;">
              <table style="width:100%;">
               <tr>
-                <td colspan="2" style="border:none;background-color: #8ce98c;">
+                <td colspan="2" style="border:none;background-color: #8ce98c !important;">
                   <span><b>Physician Information</b></span>
                 </td>
               </tr>
@@ -264,7 +264,7 @@
           <td style="width:33%;border:2px solid black;">
              <table style="width:100%;">
               <tr>
-                <td colspan="2" style="border:none;background-color: #8ce98c;">
+                <td colspan="2" style="border:none;background-color: #8ce98c !important;">
                   <span><b>Specimen Information</b></span>
                 </td>
               </tr>
