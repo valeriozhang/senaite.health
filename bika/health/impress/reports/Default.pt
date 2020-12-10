@@ -115,8 +115,8 @@
   <tal:render condition="python:True" define="laboratory python:view.laboratory;">
     <div class="row section-header no-gutters">
       <!-- Header Table -->
-      <div class="w-100 mb-2">
-        <table class="w-100 mb-0 noborder">
+      <div class="w-100">
+        <table class="w-100 noborder">
           <colgroup>
             <col style="width:100%"/>
           </colgroup>
@@ -125,17 +125,20 @@
             <td class="align-middle text-left">
               <h1 i18n:translate="" tal:content="laboratory/Name">Lab Name</h1>
             </td>
+          </tr>
+          <tr>
             <td>
               <span tal:content="laboratory/PhysicalAddress/address">Lab Street and Number</span>,
               <span tal:content="laboratory/PhysicalAddress/city">Lab City</span>,
               <span tal:content="laboratory/PhysicalAddress/zip">Lab ZIP</span>
             </td>
+          </tr>
+          <tr>
             <td>
               <span i18n:translate="">Phone</span>
               <span tal:content="laboratory/Phone">Lab Phone Number</span> &nbsp;
               <span i18n:translate="">Phone</span>
               <span tal:content="laboratory/Fax">Lab Fax Number</span>
-
             </td>
           </tr>
         </table>
