@@ -49,6 +49,7 @@
 
   <tal:css>
     <style type="text/css">
+     .report {width:100%;}
      .report * { font: 9pt; }
      .report h1 { font-size: 140%; }
      .report h2 { font-size: 120%; }
@@ -169,7 +170,7 @@
         </colgroup>
         <tr>
           <!-- PATIENT DETAILS-->
-          <td style="width:33%;border:1px solid black;">
+          <td style="width:33%;border:2px solid black;">
             <table style="width:100%;">
               <tr>
                 <td colspan="3" style="border:none;background-color: #8ce98c;">
@@ -216,7 +217,7 @@
           </td>
           
           <!-- Physician Details -->
-          <td style="width:34%;border:1px solid black;">
+          <td style="width:34%;border:2px solid black;">
              <table style="width:100%;">
               <tr>
                 <td colspan="2" style="border:none;background-color: #8ce98c;">
@@ -261,7 +262,7 @@
             </table>
           </td>
           <!-- Specimen information -->
-          <td style="width:33%;border:1px solid black;">
+          <td style="width:33%;border:2px solid black;">
              <table style="width:100%;">
               <tr>
                 <td colspan="2" style="border:none;background-color: #8ce98c;">
