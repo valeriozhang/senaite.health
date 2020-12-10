@@ -367,11 +367,7 @@
                 <col style="width: 5%">
               </colgroup>
               <thead>
-                <tr>
-                  <td colspan="5" style="font-size:10pt" class="text-left">
-                                        **** <span class="font-weight-bold" tal:content="category/Title">Category</span> ****
-                  </td>
-                </tr>
+             
                 <tr class="small">
                   <th class="analysis">
                     <span class="text-left">Test Name</span>
@@ -388,8 +384,13 @@
                   <th class="outofrange">
                     <span i18n:translate=""></span>
                   </th>
-                </tr>
+                </tr>           
               </thead>
+                <tr>
+                  <td colspan="5" style="font-size:8pt" class="text-left">
+                                        <span class="font-weight-bold" tal:content="category/Title">Category</span>
+                  </td>
+                </tr>                  
               <tbody>
                 <tal:analyses tal:repeat="analysis python:view.get_analyses_by(model, poc=poc, category=category)">
                   <tr>
