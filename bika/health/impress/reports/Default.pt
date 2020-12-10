@@ -122,22 +122,22 @@
           </colgroup>
           <tr>
             <!-- Header Left -->
-            <td class="align-middle text-left">
+            <td class="align-middle text-center">
               <h1 i18n:translate="" tal:content="laboratory/Name">Lab Name</h1>
             </td>
           </tr>
           <tr>
-            <td>
-              <span tal:content="laboratory/PhysicalAddress/address">Lab Street and Number</span>,
+            <td class="align-middle text-center" style="font-size:9pt;">
+               <span tal:content="laboratory/PhysicalAddress/address">Lab Street and Number</span>,
               <span tal:content="laboratory/PhysicalAddress/city">Lab City</span>,
               <span tal:content="laboratory/PhysicalAddress/zip">Lab ZIP</span>
             </td>
           </tr>
           <tr>
-            <td>
+            <td class="align-middle text-center" style="font-size:9pt;">
               <span i18n:translate="">Phone</span>
               <span tal:content="laboratory/Phone">Lab Phone Number</span> &nbsp;
-              <span i18n:translate="">Phone</span>
+              <span i18n:translate="">Fax</span>
               <span tal:content="laboratory/Fax">Lab Fax Number</span>
             </td>
           </tr>
