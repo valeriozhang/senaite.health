@@ -192,7 +192,6 @@
                 </td>
                 <td style="border:none;">
                   <span><b>DoB:</b></span>
-                  
                    <span tal:condition="python:patient.getBirthDate()" tal:content="python:view.to_localized_time(patient.getBirthDate(), long_format=0)"> Patient DoB</span>
                 </td>
               </tr>
@@ -232,13 +231,14 @@
               <tr>
                  <td colspan="2" style="border:none;">
                    <span tal:replace="doctor/PostalAddress/address|nothing">5517 7th Avenue</span>
+                   <span>&nbsp;</span>
                 </td>
               </tr>
               <tr>
                  <td colspan="2" style="border:none;">
                    <span tal:replace="doctor/PostalAddress/city|nothing">BROOKLYN, NY</span>
                    <span tal:replace="doctor/PostalAddress/city|nothing">11220</span>
-
+                   <span>&nbsp;</span>
                 </td>
               </tr>
               <tr>
