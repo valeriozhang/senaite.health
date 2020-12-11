@@ -194,7 +194,7 @@
                 </td>
                 <td style="border:none;">
                   <span><b>Sex:</b></span>
-                  <span tal:content="python: patient['Gender'].title() if patient['Gender']"> </span>
+                  <span tal:content="python: patient['Gender'].title() if patient['Gender'] else ''"> </span>
                 </td>
                 <td style="border:none;">
                   <span><b>DOB:</b></span>
