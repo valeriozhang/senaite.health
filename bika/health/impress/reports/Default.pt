@@ -249,7 +249,7 @@
               </tr>
               <tr>
                  <td style="border:none;">
-                   <span>Tel<b>#</b>:</span>
+                   <span><b>Tel>#</b>:</span>
                    <span tal:content="doctor/HomePhone|Nothing">(718)871-8255<</span>
                </td>
                 <td style="border:none;">
