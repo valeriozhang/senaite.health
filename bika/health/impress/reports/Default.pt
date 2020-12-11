@@ -178,7 +178,7 @@
               </tr>
               <tr>
                  <td colspan="3" style="border:none;">
-                    <span tal:content="patient/Title"> </span>
+                    <span tal:content="patient/Title" style="font-weight: bold"> </span>
                 </td>
               </tr>
               <tr>
@@ -255,7 +255,7 @@
                    <span><b>Referring Physician:</b></span>
                 </td>
                 <td style="border:none;">
-                   <span>David Zhang</span>
+                   <span>David Zhang MD</span>
                 </td>
               </tr>
             </table>
