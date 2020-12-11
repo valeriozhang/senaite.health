@@ -241,14 +241,18 @@
               </tr>
               <tr>
                  <td colspan="2" style="border:none;">
-                   <span tal:replace="doctor/PhysicalAddress/address|nothing">5517 7th Avenue</span>
+                   167-07 Powells Cove blvd, 24
+                   <!--<span tal:replace="doctor/PhysicalAddress/address|nothing">5517 7th Avenue</span>-->
                    <span>&nbsp;</span>
                 </td>
               </tr>
               <tr>
                  <td colspan="2" style="border:none;">
+                   Whitestone, NY 11357
+                   <!--
                    <span tal:replace="doctor/PhysicalAddress/city|nothing">BROOKLYN, NY</span>
                    <span tal:replace="doctor/PhysicalAddress/city|nothing">11220</span>
+                    -->
                    <span>&nbsp;</span>
                 </td>
               </tr>
