@@ -167,9 +167,9 @@
       <table class="table table-sm table-condensed w-100" style="font-size:7pt;">
         <colgroup>
           <!-- Client Address -->
-          <col style="width: 33%;">
+          <col style="width: 32%;">
           <!-- Lab Address -->
-          <col style="width: 34%">
+          <col style="width: 35%">
           <!-- Accreditation Logo -->
           <col style="width: 33%">
         </colgroup>
@@ -208,7 +208,7 @@
               </tr>
               <tr>
                  <td colspan="2" style="border:none;">
-                   <span><b>Chart #:</b></span>
+                   <span><b>Chart#:</b></span>
                    <span tal:content="patient/ClientPatientID">Client Patient ID</span>
                 </td>
               </tr>
@@ -248,12 +248,12 @@
               </tr>
               <tr>
                  <td style="border:none;">
-                   <span><b>Tel#</b>:</span>
+                   <span><b>Tel#:</b></span>
                    <span tal:content="doctor/HomePhone|Nothing">(718)871-8255<</span>
                </td>
                 <td style="border:none;">
-                   <span><b>Fax#</b>:</span>
-                  <span tal:content="doctor/BusinessFax|Nothing">(718)871-8255<</span>
+                   <span><b>Fax#:</b></span>
+                   <span tal:content="doctor/BusinessFax|Nothing">(718)871-8255<</span>
 
                </td>
               </tr>
