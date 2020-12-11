@@ -359,9 +359,9 @@
                 <col style="width: 37%;">
                 <!-- Result -->
                 <col style="width: 28%">
-                <!-- Unit -->
-                <col style="width: 20%">
                 <!-- Range -->
+                <col style="width: 20%">
+                <!-- Unit -->
                 <col style="width: 10%">
                 <!-- Out of Range -->
                 <col style="width: 5%">
@@ -379,7 +379,7 @@
                     <span i18n:translate="">Normal Range</span>
                   </th>
                   <th class="text-left unit">
-                    <span i18n:translate="">Unit</span>
+                    <span i18n:translate="">Units</span>
                   </th>
                   <th class="outofrange">
                     <span i18n:translate=""></span>
