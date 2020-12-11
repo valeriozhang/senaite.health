@@ -167,9 +167,9 @@
       <table class="table table-sm table-condensed w-100" style="font-size:7pt;">
         <colgroup>
           <!-- Client Address -->
-          <col style="width: 31%;">
+          <col style="width: 30%;">
           <!-- Lab Address -->
-          <col style="width: 36%">
+          <col style="width: 37%">
           <!-- Accreditation Logo -->
           <col style="width: 33%">
         </colgroup>
