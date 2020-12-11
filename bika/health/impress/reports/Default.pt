@@ -167,11 +167,11 @@
       <table class="table table-sm table-condensed w-100" style="font-size:7pt;">
         <colgroup>
           <!-- Client Address -->
-          <col style="width: 31%;">
+          <col style="width: 33%;">
           <!-- Lab Address -->
           <col style="width: 37%">
           <!-- Accreditation Logo -->
-          <col style="width: 32%">
+          <col style="width: 30%">
         </colgroup>
         <tr>
           <!-- PATIENT DETAILS-->
@@ -277,7 +277,7 @@
               </tr>
               <tr>
                  <td style="border:none;">
-                   <span><b>Accession #</b></span>
+                   <span><b>Accession#:</b></span>
                 </td>
                 <td style="border:none;">
                    <span tal:content="model/getId">123456789</span>
