@@ -178,43 +178,42 @@
           <td style="width:33%;border:2px solid black;">
             <table style="width:100%;">
               <tr>
-                <td colspan="3" style="border:none;">
+                <td colspan="2" style="border:none;">
                   <div style="background-color:lightblue;"><span><b>Patient Information</b></span></div>
                 </td>
               </tr>
               <tr>
-                 <td colspan="3" style="border:none;">
+                 <td colspan="2" style="border:none;">
                     <span tal:content="patient/Title" style="font-weight: bold"> </span>
                 </td>
               </tr>
               <tr>
-                 <td style="border:none;">
-                   <span><b>Age:</b></span> 20
-                   <span tal:content="patient/Age"> </span>
-                </td>
                 <td style="border:none;">
-                  <span><b>Sex:</b></span>
-                  <span tal:content="python: patient['Gender'].title() if patient['Gender'] else ''"> </span>
+                   <span><b>Age/Sex:</b></span> 20/
+                   <span tal:content="python: patient['Gender'].title() if patient['Gender'] else ''"> </span>
+
+                   <!-- <span tal:content="patient/Age"> </span> -->
                 </td>
+                
                 <td style="border:none;">
                   <span><b>DOB:</b></span>
                    <span tal:condition="python:patient.getBirthDate()" tal:content="python:model.format_the_date(patient.getBirthDate())"> Patient DoB</span>
                 </td>
               </tr>
               <tr>
-                 <td colspan="3" style="border:none;">
+                 <td colspan="2" style="border:none;">
                    <span><b>Phone:</b></span>
                    <span tal:content="patient/HomePhone|Nothing">1234567890</span>
                 </td>
               </tr>
               <tr>
-                 <td colspan="3" style="border:none;">
+                 <td colspan="2" style="border:none;">
                    <span><b>Chart #:</b></span>
                    <span tal:content="patient/ClientPatientID">Client Patient ID</span>
                 </td>
               </tr>
                 <tr>
-                 <td colspan="3" style="border:none;">
+                 <td colspan="2" style="border:none;">
                    <span>&nbsp;</span>
                 </td>
               </tr>
@@ -249,7 +248,7 @@
               </tr>
               <tr>
                  <td style="border:none;">
-                   <span><b>Tel>#</b>:</span>
+                   <span><b>Tel#</b>:</span>
                    <span tal:content="doctor/HomePhone|Nothing">(718)871-8255<</span>
                </td>
                 <td style="border:none;">
