@@ -254,7 +254,7 @@
                </td>
                 <td style="border:none;">
                    <span><b>Fax#</b>:</span>
-                  <span tal:content="doctor/FAX|Nothing">(718)871-8255<</span>
+                  <span tal:content="doctor/BusinessFax|Nothing">(718)871-8255<</span>
 
                </td>
               </tr>
