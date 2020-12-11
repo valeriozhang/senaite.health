@@ -387,7 +387,7 @@
                 </tr>           
               </thead>
                 <tr>
-                  <td colspan="5" style="font-size:8pt" class="text-left">
+                  <td colspan="5" class="text-left">
                                         <span class="font-weight-bold" tal:content="category/Title">Category</span>
                   </td>
                 </tr>                  
