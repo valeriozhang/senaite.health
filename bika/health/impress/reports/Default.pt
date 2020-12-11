@@ -167,11 +167,11 @@
       <table class="table table-sm table-condensed w-100" style="font-size:7pt;">
         <colgroup>
           <!-- Client Address -->
-          <col style="width: 32%;">
+          <col style="width: 31%;">
           <!-- Lab Address -->
-          <col style="width: 35%">
+          <col style="width: 37%">
           <!-- Accreditation Logo -->
-          <col style="width: 33%">
+          <col style="width: 32%">
         </colgroup>
         <tr>
           <!-- PATIENT DETAILS-->
@@ -393,11 +393,13 @@
                   </th>
                 </tr>           
               </thead>
+                  <!--
                 <tr>
                   <td colspan="5" class="text-left">
                       <span tal:content="category/Title">Category</span>
                   </td>
-                </tr>                  
+                </tr>      
+                -->
               <tbody>
                 <tal:analyses tal:repeat="analysis python:view.get_analyses_by(model, poc=poc, category=category)">
                   <tr>
