@@ -230,24 +230,26 @@
               </tr>
               <tr>
                  <td colspan="2" style="border:none;">
-                   <span tal:replace="doctor/PostalAddress/address|nothing">5517 7th Avenue</span>
+                   <span tal:replace="doctor/PhysicalAddress/address|nothing">5517 7th Avenue</span>
                    <span>&nbsp;</span>
                 </td>
               </tr>
               <tr>
                  <td colspan="2" style="border:none;">
-                   <span tal:replace="doctor/PostalAddress/city|nothing">BROOKLYN, NY</span>
-                   <span tal:replace="doctor/PostalAddress/city|nothing">11220</span>
+                   <span tal:replace="doctor/PhysicalAddress/city|nothing">BROOKLYN, NY</span>
+                   <span tal:replace="doctor/PhysicalAddress/city|nothing">11220</span>
                    <span>&nbsp;</span>
                 </td>
               </tr>
               <tr>
                  <td style="border:none;">
                    <span>Tel<b>#</b>:</span>
-                   <span tal:content="doctor/HomePhone|Nothing" style="font-weight: bold">(718)871-8255<</span>
+                   <span tal:content="doctor/HomePhone|Nothing">(718)871-8255<</span>
                </td>
                 <td style="border:none;">
-                   <span>Fax<b>#</b>:</span><span><b>(718)871-8255</b></span>
+                   <span><b>Fax#</b>:</span>
+                  <span tal:content="doctor/FAX|Nothing">(718)871-8255<</span>
+
                </td>
               </tr>
               <tr>
