@@ -198,7 +198,7 @@
                 </td>
                 <td style="border:none;">
                   <span><b>DOB:</b></span>
-                   <span tal:condition="python:patient.getBirthDate()" tal:content="python:modle.format_the_date(patient.getBirthDate())"> Patient DoB</span>
+                   <span tal:condition="python:patient.getBirthDate()" tal:content="python:model.format_the_date(patient.getBirthDate())"> Patient DoB</span>
                 </td>
               </tr>
               <tr>
