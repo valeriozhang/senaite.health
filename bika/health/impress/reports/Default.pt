@@ -368,7 +368,7 @@
               </colgroup>
               <thead>
              
-                <tr class="small">
+                <tr  class="font-weight-bold" >
                   <th class="analysis">
                     <span class="text-left">Test Name</span>
                   </th>
@@ -388,7 +388,7 @@
               </thead>
                 <tr>
                   <td colspan="5" class="text-left">
-                                        <span class="font-weight-bold" tal:content="category/Title">Category</span>
+                      <span tal:content="category/Title">Category</span>
                   </td>
                 </tr>                  
               <tbody>
