@@ -138,7 +138,7 @@
           </tr>
           <tr>
             <td class="align-middle text-center" style="font-size:9pt;">
-              Phone +1 (718) 213-6274  Fax 888-377-1244
+              <b>Phone</b> +1 (718) 213-6274 &nbsp;&nbsp; <b>Fax</b> +1 (888) 377-1244
               <!--
               <span i18n:translate="">Phone</span>
               <span tal:content="laboratory/Phone">Lab Phone Number</span> &nbsp;&nbsp;&nbsp;
@@ -167,15 +167,15 @@
       <table class="table table-sm table-condensed w-100" style="font-size:7pt;">
         <colgroup>
           <!-- Client Address -->
-          <col style="width: 29%;">
+          <col style="width: 31%;">
           <!-- Lab Address -->
           <col style="width: 37%">
           <!-- Accreditation Logo -->
-          <col style="width: 34%">
+          <col style="width: 32%">
         </colgroup>
         <tr>
           <!-- PATIENT DETAILS-->
-          <td style="width:29%;border:2px solid black;">
+          <td style="width:31%;border:2px solid black;">
             <table style="width:100%;">
               <tr>
                 <td colspan="2" style="border:none;">
@@ -268,7 +268,7 @@
             </table>
           </td>
           <!-- Specimen information -->
-          <td style="width:34%;border:2px solid black;">
+          <td style="width:32%;border:2px solid black;">
              <table style="width:100%;">
               <tr>
                 <td colspan="2" style="border:none;">
@@ -288,7 +288,7 @@
                    <span><b>Date Collected:</b></span>
                 </td>
                 <td style="border:none;">
-                   <span tal:content="python:view.to_localized_time(model.DateSampled)">11/12/2020</span>
+                   <span tal:content="python:model.format_the_date(model.DateSampled)">11/12/2020</span>
                 </td>
               </tr>
               <tr>
@@ -296,7 +296,7 @@
                    <span><b>Date Received:</b></span>
                 </td>
                 <td style="border:none;">
-                   <span tal:content="python:view.to_localized_time(model.DateReceived)">11/12/2020</span>
+                   <span tal:content="python:model.format_the_date(model.DateReceived)">11/12/2020</span>
                 </td>
               </tr>
               <tr>
@@ -304,7 +304,7 @@
                    <span><b>Date Reported:</b></span>
                 </td>
                 <td style="border:none;">
-                   <span tal:content="python:view.to_localized_time(model.DatePublished) if model.DatePublished else view.to_localized_time(model.get_curr_date_time())">11/12/2020</span>
+                   <span tal:content="python:model.format_the_date(model.DatePublished) if model.DatePublished else model.format_the_date(model.get_curr_date_time())">11/12/2020</span>
                 </td>
               </tr>
                 <tr>
