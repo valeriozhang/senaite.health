@@ -297,7 +297,7 @@
                    <span><b>Date Reported:</b></span>
                 </td>
                 <td style="border:none;">
-                   <span tal:content="python:view.to_localized_time(model.DatePublished) if model.DatePublished else model.get_curr_date_time()">11/12/2020</span>
+                   <span tal:content="python:view.to_localized_time(model.DatePublished) if model.DatePublished else view.to_localized_time(model.get_curr_date_time())">11/12/2020</span>
                 </td>
               </tr>
                 <tr>
