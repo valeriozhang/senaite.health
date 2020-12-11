@@ -138,7 +138,7 @@
           </tr>
           <tr>
             <td class="align-middle text-center" style="font-size:9pt;">
-              Phone 718-463-6888  Fax 888-377-1244
+              Phone +1 (718) 213-6274  Fax 888-377-1244
               <!--
               <span i18n:translate="">Phone</span>
               <span tal:content="laboratory/Phone">Lab Phone Number</span> &nbsp;&nbsp;&nbsp;
@@ -194,11 +194,11 @@
                 </td>
                 <td style="border:none;">
                   <span><b>Sex:</b></span>
-                  <span tal:content="patient/Gender"> </span>
+                  <span tal:content="python: patient['Gender'].title() if patient['Gender']"> </span>
                 </td>
                 <td style="border:none;">
-                  <span><b>DoB:</b></span>
-                   <span tal:condition="python:patient.getBirthDate()" tal:content="python:view.to_localized_time(patient.getBirthDate(), long_format=0)"> Patient DoB</span>
+                  <span><b>DOB:</b></span>
+                   <span tal:condition="python:patient.getBirthDate()" tal:content="python:modle.format_the_date(patient.getBirthDate())"> Patient DoB</span>
                 </td>
               </tr>
               <tr>
