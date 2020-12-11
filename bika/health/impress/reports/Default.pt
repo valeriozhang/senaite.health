@@ -128,17 +128,23 @@
           </tr>
           <tr>
             <td class="align-middle text-center" style="font-size:9pt;">
+              26-19 FRANCIS LEWIS BLVD, FLUSHING, NY 11358
+              <!--
                <span tal:content="laboratory/PhysicalAddress/address">Lab Street and Number</span>,
               <span tal:content="laboratory/PhysicalAddress/state">Lab State</span>,
               <span tal:content="laboratory/PhysicalAddress/zip">Lab ZIP</span>
+              -->
             </td>
           </tr>
           <tr>
             <td class="align-middle text-center" style="font-size:9pt;">
+              Phone 718-463-6888  Fax 888-377-1244
+              <!--
               <span i18n:translate="">Phone</span>
               <span tal:content="laboratory/Phone">Lab Phone Number</span> &nbsp;&nbsp;&nbsp;
               <span i18n:translate="">Fax</span>
               <span tal:content="laboratory/Fax">Lab Fax Number</span>
+              -->
               <br/>
             </td>
           </tr>
@@ -567,7 +573,7 @@
         </div>
         <div class="discreeter-disclaimer"
              i18n:translate="">
-This test has been validated at NOVINO PATHOLOHY but has not been reviewed by the FDA. Negative results do not rule out SARS-CoV-2 infection, particularly in those who have been in contact with the virus. Follow-up testing with a molecular diagnostic should be considered to rule out infection in these individuals. Results from antibody testing should not be used as the sole basis to diagnose or exclude SARS-CoV-2 infection or to inform infection status. Positive results may be due to past or present
+This test has been validated at NOVINO PATHOLOGY but has not been reviewed by the FDA. Negative results do not rule out SARS-CoV-2 infection, particularly in those who have been in contact with the virus. Follow-up testing with a molecular diagnostic should be considered to rule out infection in these individuals. Results from antibody testing should not be used as the sole basis to diagnose or exclude SARS-CoV-2 infection or to inform infection status. Positive results may be due to past or present
 infection with non-SARS-CoV-2 coronavirus strains, such as coronavirus HKU1, NL63, OC43, or 229E.
         </div>
         
