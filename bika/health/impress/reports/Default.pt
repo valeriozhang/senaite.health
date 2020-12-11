@@ -138,7 +138,9 @@
           </tr>
           <tr>
             <td class="align-middle text-center" style="font-size:9pt;">
-              <b>Phone</b> +1 (718) 213-6274 &nbsp;&nbsp; <b>Fax</b> +1 (888) 377-1244
+              <span><b>Phone:</b> +1 (718) 213-6274</span> 
+              <span>&nbsp;&nbsp;</span>
+              <span><b>Fax:</b> +1 (888) 377-1244</span>
               <!--
               <span i18n:translate="">Phone</span>
               <span tal:content="laboratory/Phone">Lab Phone Number</span> &nbsp;&nbsp;&nbsp;
