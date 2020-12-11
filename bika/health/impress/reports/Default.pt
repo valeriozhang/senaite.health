@@ -375,10 +375,10 @@
                   <th class="text-right result">
                     <span i18n:translate="">Result</span>
                   </th>
-                  <th class="text-left unit">
+                  <th class="specs">
                     <span i18n:translate="">Normal Range</span>
                   </th>
-                  <th class="specs">
+                  <th class="text-left unit">
                     <span i18n:translate="">Unit</span>
                   </th>
                   <th class="outofrange">
