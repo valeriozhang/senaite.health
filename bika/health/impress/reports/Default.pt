@@ -189,7 +189,7 @@
               </tr>
               <tr>
                  <td style="border:none;">
-                   <span><b>Age:</b></span>
+                   <span><b>Age:</b></span> 20
                    <span tal:content="patient/Age"> </span>
                 </td>
                 <td style="border:none;">
