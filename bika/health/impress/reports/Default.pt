@@ -372,7 +372,7 @@
                   <th class="analysis">
                     <span class="text-left">Test Name</span>
                   </th>
-                  <th class="text-right result">
+                  <th class="text-left result">
                     <span i18n:translate="">Result</span>
                   </th>
                   <th class="specs">
