@@ -37,7 +37,7 @@ setup(
     install_requires=[
         "archetypes.schemaextender",
         "valeri.lims==1.3.4rc1",
-        "valeri.panic<=1.0.1",
+        "valeri.panic==1.0.1rc1",
     ],
     extras_require={
         'test': [
