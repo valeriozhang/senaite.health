@@ -7,7 +7,7 @@
 from setuptools import setup, find_packages
 
 
-version = '1.2.4'
+version = '1.2.4rc1'
 
 setup(
     name='valeri.health',
@@ -36,8 +36,7 @@ setup(
     zip_safe=False,
     install_requires=[
         "archetypes.schemaextender",
-        "valeri.lims=1.3.4",
-        "valeri.lims<1.4.0",
+        "valeri.lims==1.3.4rc1",
         "valeri.panic<=1.0.1",
     ],
     extras_require={
