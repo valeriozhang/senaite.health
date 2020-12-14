@@ -10,7 +10,7 @@ from setuptools import setup, find_packages
 version = '1.2.4rc3'
 
 setup(
-    name='valeri.health',
+    name='valer.health',
     version=version,
     description="Valer Health",
     long_description=open("README.rst").read() + "\n" +
