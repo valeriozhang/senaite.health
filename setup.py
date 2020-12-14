@@ -36,8 +36,8 @@ setup(
     zip_safe=False,
     install_requires=[
         "archetypes.schemaextender",
-        "valeri.lims==1.3.4rc1",
-        "valeri.panic==1.0.1rc1",
+        "valer.lims==1.3.4rc1",
+        "valer.panic==1.0.1rc1",
     ],
     extras_require={
         'test': [
