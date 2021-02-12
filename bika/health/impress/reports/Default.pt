@@ -41,7 +41,7 @@
   </div>
 
   <script type="text/javascript">
-   console.info("######################################################################");
+   console.info("####################################Valer Impress##################################");
    window.options = "<tal:t replace='options'/>";
    console.log(window.options);
    console.info("######################################################################");
