@@ -452,6 +452,12 @@
                       </span>
                     </td>
                   </tr>
+		  <tr tal:condition="python: model.get_category_description(category)">
+                          <td colspan="5">
+                                  <span tal:content="python: model.get_category_description(category)">cat_description</span>
+                          </td>
+                  </tr>
+
                 </tal:analyses>
               </tbody>
               <tfoot tal:define="category_comments python:category.Comments">
@@ -477,16 +483,16 @@
          tal:define="ris python:model.get_resultsinterpretation();
                      has_ri python:any(map(lambda r: r.get('richtext'), ris));">
       <div class="" tal:condition="has_ri">
-        <h1 i18n:translate="">Results interpretation</h1>
+        <h1 i18n:translate="">Remarks</h1>
 
         <tal:ri repeat="ri ris">
-          <h2 tal:condition="ri/richtext|nothing" tal:content="ri/title|nothing">Department</h2>
+        <!-- <h2 tal:condition="ri/richtext|nothing" tal:content="ri/title|nothing">Department</h2> -->
           <div class="text-info" tal:content="structure ri/richtext|nothing"></div>
         </tal:ri>
       </div>
     </div>
   </tal:render>
-
+  
   <!-- QC RESULTS -->
   <tal:render condition="python:True"
               define="qcanalyses python:model.getQCAnalyses(['verified', 'published']);">

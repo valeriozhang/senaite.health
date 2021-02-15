@@ -648,6 +648,7 @@ schema = Person.schema.copy() + Schema((
                           "photos, will be included in emails to patient "
                           "if this option is enabled"))
     ),
+
     ReferenceField(
         'InsuranceCompany',
         vocabulary='get_insurancecompanies',
@@ -656,7 +657,7 @@ schema = Person.schema.copy() + Schema((
         required=False,
         widget=SelectionWidget(
             format='select',
-            label=_('Primary Insurance Company'),
+            label=_('Primary Insurance Company ----------------------'),
             ),
         ),
     StringField(
@@ -667,7 +668,48 @@ schema = Person.schema.copy() + Schema((
             label=_('Primary Insurance Number'),
         ),
     ),
-    
+
+    DateTimeField_bl(
+        'InsuranceExpirationDate',
+        required=0,
+        validators=('isDateFormat',),
+        widget=DateTimeWidget_bl(
+            label=_('Expiration date'),
+            datepicker_nofuture=0,
+        ),
+    ),
+
+    StringField(
+        'InsuredSSN',
+        searchable=1,
+        required=0,
+        widget=StringWidget(
+            label=_('Primary Insured SSN'),
+            render_own_label=False,
+
+        ),
+    ),
+    StringField(
+        'InsuranceRelationship',
+        vocabulary=INSURANCE_RELATIONSHIPS,
+        index='FieldIndex',
+        default='self',
+        widget=SelectionWidget(
+            format='select',
+            label=_('Relationship'),
+        ),
+    ),
+
+    DateTimeField_bl(
+        'InsuredDob',
+        required=0,
+        validators=('isDateFormat',),
+        widget=DateTimeWidget_bl(
+            label=_('Insured DOB'),
+            datepicker_nofuture=1,
+        ),
+    ),
+
     ReferenceField(
         'InsuranceCompanySecondary',
         vocabulary='get_insurancecompanies',
@@ -676,7 +718,7 @@ schema = Person.schema.copy() + Schema((
         required=False,
         widget=SelectionWidget(
             format='select',
-            label=_('Secondary Insurance Company'),
+            label=_('Secondary Insurance Company -------------------------'),
             ),
         ),
     StringField(
@@ -687,7 +729,49 @@ schema = Person.schema.copy() + Schema((
             label=_('Secondary Insurance Number'),
         ),
     ),
-    
+    DateTimeField_bl(
+        'InsuranceExpirationDateSecondary',
+        required=0,
+        validators=('isDateFormat',),
+        widget=DateTimeWidget_bl(
+            label=_('Expiration date'),
+            datepicker_nofuture=0,
+        ),
+    ),
+
+    StringField(
+        'InsuredSSNSecondary',
+        searchable=1,
+        required=0,
+        widget=StringWidget(
+            label=_('Insured SSN'),
+            render_own_label=False,
+
+        ),
+    ),
+
+    StringField(
+        'InsuranceRelationshipSecondary',
+        vocabulary=INSURANCE_RELATIONSHIPS,
+        index='FieldIndex',
+        default='self',
+        widget=SelectionWidget(
+            format='select',
+            label=_('Relationship'),
+        ),
+    ),
+
+    DateTimeField_bl(
+        'InsuredDobSecondary',
+        required=0,
+        validators=('isDateFormat',),
+        widget=DateTimeWidget_bl(
+            label=_('Insured DOB'),
+            datepicker_nofuture=1,
+        ),
+    ),
+
+
     ReferenceField(
         'InsuranceCompanyTertiary',
         vocabulary='get_insurancecompanies',
@@ -696,7 +780,7 @@ schema = Person.schema.copy() + Schema((
         required=False,
         widget=SelectionWidget(
             format='select',
-            label=_('Tertiary Insurance Company'),
+            label=_('Tertiary Insurance Company --------------------------'),
             ),
         ),
     StringField(
@@ -707,6 +791,48 @@ schema = Person.schema.copy() + Schema((
             label=_('Tertiary Insurance Number'),
         ),
     ),
+    DateTimeField_bl(
+        'InsuranceExpirationDateTertiary',
+        required=0,
+        validators=('isDateFormat',),
+        widget=DateTimeWidget_bl(
+            label=_('Expiration date'),
+            datepicker_nofuture=0,
+        ),
+    ),
+
+    StringField(
+        'InsuredSSNTertiary',
+        searchable=1,
+        required=0,
+        widget=StringWidget(
+            label=_('Insured SSN'),
+            render_own_label=False,
+
+        ),
+    ),
+
+    StringField(
+        'InsuranceRelationshipTertiary',
+        vocabulary=INSURANCE_RELATIONSHIPS,
+        index='FieldIndex',
+        default='self',
+        widget=SelectionWidget(
+            format='select',
+            label=_('Relationship'),
+        ),
+    ),
+
+    DateTimeField_bl(
+        'InsuredDobTertiary',
+        required=0,
+        validators=('isDateFormat',),
+        widget=DateTimeWidget_bl(
+            label=_('Insured DOB'),
+            datepicker_nofuture=1,
+        ),
+    ),
+
     BooleanField(
         'InvoiceToInsuranceCompany',
         default=False,
@@ -837,10 +963,25 @@ schema['HomePhone'].schemata = 'Personal'
 schema['MobilePhone'].schemata = 'Personal'
 schema['InsuranceCompany'].schemata = 'Insurance'
 schema['InsuranceNumber'].schemata = 'Insurance'
+schema['InsuranceExpirationDate'].schemata = 'Insurance'
+schema['InsuredDob'].schemata = 'Insurance'
+schema['InsuranceRelationship'].schemata = 'Insurance'
+schema['InsuredSSN'].schemata = 'Insurance'
+
 schema['InsuranceCompanySecondary'].schemata = 'Insurance'
 schema['InsuranceNumberSecondary'].schemata = 'Insurance'
+schema['InsuranceExpirationDateSecondary'].schemata = 'Insurance'
+schema['InsuranceRelationshipSecondary'].schemata = 'Insurance'
+schema['InsuredDobSecondary'].schemata = 'Insurance'
+schema['InsuredSSNSecondary'].schemata = 'Insurance'
+
 schema['InsuranceCompanyTertiary'].schemata = 'Insurance'
 schema['InsuranceNumberTertiary'].schemata = 'Insurance'
+schema['InsuranceExpirationDateTertiary'].schemata = 'Insurance'
+schema['InsuranceRelationshipTertiary'].schemata = 'Insurance'
+schema['InsuredDobTertiary'].schemata = 'Insurance'
+schema['InsuredSSNTertiary'].schemata = 'Insurance'
+
 schema['InvoiceToInsuranceCompany'].schemata = 'Insurance'
 schema.moveField('PrimaryReferrer', after='Surname')
 schema.moveField('PatientID', before='title')
