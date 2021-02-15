@@ -7,7 +7,7 @@
 from setuptools import setup, find_packages
 
 
-version = '1.2.4rc7'
+version = '1.2.4rc8'
 
 setup(
     name='valer.health',
