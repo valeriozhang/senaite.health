@@ -195,11 +195,13 @@
               </tr>
               <tr>
                 <td style="border:none;">
-                   <span><b>Age/Sex:</b></span> 20/
+                   <span><b>Age/Sex:</b></span>
+                   <span tal:content="python: model.get_patient_age(patient.getBirthDate())">Age in years </span>
+
                    <span tal:content="python: patient['Gender'].title() if patient['Gender'] else ''"> </span>
 
-                   <!-- <span tal:content="patient/Age"> </span> -->
                 </td>
+		
                 
                 <td style="border:none;">
                   <span><b>DOB:</b></span>

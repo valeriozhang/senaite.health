@@ -186,6 +186,20 @@ def get_age_ymd(birth_date, to_date=None):
     delta = get_relative_delta(birth_date, to_date)
     return to_ymd(delta)
 
+def get_age_in_years(birth_date, to_date=None):
+    """Returns the age at to_date if not None. Otherwise, current age
+    """
+    delta = get_relative_delta(birth_date, to_date)
+    return to_years(delta)
+
+
+def to_years(delta):
+    """Returns a representation of a relative delta in ymd format
+    """
+    if not isinstance(delta, relativedelta):
+        raise TypeError("delta parameter must be a relative_delta")
+
+    return str(delta.years) + 'y'
 
 def get_relative_delta(from_date, to_date=None):
     """Returns the relative delta between two dates. If to_date is None,

@@ -7,7 +7,7 @@
 from setuptools import setup, find_packages
 
 
-version = '1.2.4rc9'
+version = '1.2.4rc10'
 
 setup(
     name='valer.health',
@@ -36,8 +36,8 @@ setup(
     zip_safe=False,
     install_requires=[
         "archetypes.schemaextender",
-        "valer.lims==1.3.4rc9",
-        "valer.panic==1.0.1rc9",
+        "valer.lims==1.3.4rc10",
+        "valer.panic==1.0.1rc10",
     ],
     extras_require={
         'test': [
