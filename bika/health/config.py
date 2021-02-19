@@ -30,6 +30,12 @@ GENDERS = DisplayList((
     ('dk', _("Don't Know")),
     ))
 
+INSURANCE_RELATIONSHIPS = DisplayList((
+    ('self', _('Self')),
+    ('spouse', _('Spouse')),
+    ('pareint', _("Parent")),
+    ))
+
 ETHNICITIES = DisplayList((
     ('Native American', _('Native American')),
     ('Asian', _('Asian')),
