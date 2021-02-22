@@ -197,12 +197,8 @@
                 <td style="border:none;">
                    <span><b>Age/Sex:</b></span>
                    <span tal:content="python: model.get_patient_age(patient.getBirthDate())">Age in years </span>
-
                    <span tal:content="python: patient['Gender'].title() if patient['Gender'] else ''"> </span>
-
                 </td>
-		
-                
                 <td style="border:none;">
                   <span><b>DOB:</b></span>
                    <span tal:condition="python:patient.getBirthDate()" tal:content="python:model.format_the_date(patient.getBirthDate())"> Patient DoB</span>
@@ -454,12 +450,6 @@
                       </span>
                     </td>
                   </tr>
-		  <tr tal:condition="python: model.get_category_description(category)">
-                          <td colspan="5">
-                                  <span tal:content="python: model.get_category_description(category)">cat_description</span>
-                          </td>
-                  </tr>
-
                 </tal:analyses>
               </tbody>
               <tfoot tal:define="category_comments python:category.Comments">
@@ -471,6 +461,15 @@
                     </div>
                   </td>
                 </tr>
+		<tr tal:condition="python: model.get_category_description(category)">
+                  <td colspan="3">
+                    <div class="category_comments"
+                         tal:content="python: model.get_category_description(category)">
+                      Category Description
+                    </div>
+                  </td>
+                </tr>
+		
               </tfoot>
             </table>
           </tal:categories_in_poc>
