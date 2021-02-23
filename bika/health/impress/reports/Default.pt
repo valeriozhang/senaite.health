@@ -463,7 +463,7 @@
                 </tr>
 		<tr tal:condition="python: model.get_category_description(category)">
                   <td colspan="3">
-                    <div class="category_comments"
+                    <div style="font-size: 8pt; font-style: italic;" 
                          tal:content="python: model.get_category_description(category)">
                       Category Description
                     </div>
