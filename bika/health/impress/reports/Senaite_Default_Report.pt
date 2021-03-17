@@ -130,7 +130,7 @@
 	  </tr>
           <tr>
             <td class="align-middle text-center" style="color: blue;">
-		    <h1><span>PATHOLOGY REPORT</span></h1>
+		    <h1><span>LABORATORY REPORT</span></h1>
 		    <h2> <span tal:content="laboratory/Name">Lab Name</span></h2>
             </td>
           </tr>
@@ -175,15 +175,15 @@
       <table class="table table-sm table-condensed w-100" style="font-size:7pt;">
         <colgroup>
           <!-- Client Address -->
-          <col style="width: 30%;">
+          <col style="width: 25%;">
           <!-- Lab Address -->
           <col style="width: 40%">
           <!-- Accreditation Logo -->
-          <col style="width: 30%">
+          <col style="width: 35%">
         </colgroup>
         <tr>
           <!-- PATIENT DETAILS-->
-          <td style="width:30%;border:2px solid black;">
+          <td style="width:25%;border:2px solid black;">
             <table style="width:100%;">
               <tr>
                 <td colspan="2" style="border:none;">
@@ -191,9 +191,10 @@
                 </td>
               </tr>
               <tr>
-                 <td colspan="2" style="border:none;">
-                    <span tal:omit-tag="True" tal:content="patient/Surname" style="font-weight: bold"> </span>,
-                    <span tal:omit-tag="True" tal:content="patient/Firstname" style="font-weight: bold"> </span>		    
+                 <td colspan="2" style="border:none; font-weight: bold">
+                    <span tal:omit-tag="True" tal:content="patient/Surname"> </span>,
+                    <span tal:omit-tag="True" tal:content="patient/Firstname"> </span>		    
+                    <span tal:omit-tag="True" tal:content="patient/Middlename"> </span>		    
                 </td>
               </tr>
               <tr>
@@ -240,11 +241,14 @@
                 </td>
               </tr>
               <tr>
-                 <td colspan="2" style="border:none;">
-		   <span tal:content="doctor/Salutation|Nothing" style="font-weight: bold">Dr. </span>
-                   <span tal:content="doctor/Surname" style="font-weight: bold">YENFENG CHEN Physician, P.C</span>
-                   <span tal:omit-tag="True" tal:content="doctor/Firstname" style="font-weight: bold">YENFENG CHEN Physician, P.C</span>,		   
-		   <span tal:content="doctor/JobTitle" style="font-weight: bold">MD</span>
+                 <td colspan="2" style="border:none; font-weight: bold">
+		   <span tal:content="doctor/Salutation|Nothing">Dr. </span>
+                   <span tal:content="doctor/Firstname">YENFENG CHEN Physician, P.C</span>
+                   <span tal:content="doctor/Middlename">YENFENG CHEN Physician, P.C</span>
+		   <!-- omit-tag does not respect styles -->
+                   <span tal:omit-tag="True" tal:content="doctor/Surname">YENFENG CHEN Physician, P.C</span>
+		   <span tal:omit-tag="True" tal:condition="doctor/JobTitle">, </span>
+		   <span tal:content="doctor/JobTitle">MD</span>
                 </td>
               </tr>
               <tr>
@@ -285,7 +289,7 @@
             </table>
           </td>
           <!-- Specimen information -->
-          <td style="width:30%;border:2px solid black;">
+          <td style="width:35%;border:2px solid black;">
              <table style="width:100%;">
               <tr>
                 <td colspan="2" style="border:none;">
