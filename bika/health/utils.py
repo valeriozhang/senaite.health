@@ -199,7 +199,7 @@ def to_years(delta):
     if not isinstance(delta, relativedelta):
         raise TypeError("delta parameter must be a relative_delta")
 
-    return str(delta.years) + 'y'
+    return str(delta.years) + 'Y'
 
 def get_relative_delta(from_date, to_date=None):
     """Returns the relative delta between two dates. If to_date is None,

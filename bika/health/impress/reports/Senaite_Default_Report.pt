@@ -64,7 +64,7 @@
      .report table { border-color: black; }
      .report table td, .report table th {}
      .report table th {}
-     .report table.range-table td { padding: 0 0.3rem 0 0; border: none; }
+     .report table.range-table td { padding: 0 0.2rem 0 0; border: none; }
      .report .section-header h1 { font-size: 175%; }
      .report .section-header img.logo { height: 100px; margin: 20px 0; }
      .report .barcode-hri { margin-top: -0.25em; font-size: 8pt; }
@@ -121,32 +121,25 @@
             <col style="width:20%"/>
 	    <col style="width:80%"/>
           </colgroup>
-          <tr>
-            <!-- Header Left -->
-	    <td class="align-middle text-left" rowspan="3">
+	  <tr>	
+		<td class="align-middle text-left">
               <img  style="width:175px"
                    tal:attributes="src python:view.get_resource_url('logo.png')"/>
             </td>
+	    
+	  </tr>
+          <tr>
             <td class="align-middle text-center" style="color: blue;">
-		    <h1> <span tal:content="laboratory/Name">Lab Name</span>
-	      PATHOLOGY REPORT</h1>
+		    <h1><span>PATHOLOGY REPORT</span></h1>
+		    <h2> <span tal:content="laboratory/Name">Lab Name</span></h2>
             </td>
           </tr>
           <tr>
             <td class="align-middle text-center" style="font-size:9pt;">
-                 <span tal:content="laboratory/PhysicalAddress/address">Lab Street and Number</span>,<span tal:content="laboratory/PhysicalAddress/city">City</span>, 
+                 <span tal:omit-tag="True" tal:content="laboratory/PhysicalAddress/address">Lab Street and Number</span>,
+		 <span tal:omit-tag="True" tal:content="laboratory/PhysicalAddress/city">City</span>, 
                    <span tal:content="laboratory/PhysicalAddress/state">State</span> 
                  <span tal:content="laboratory/PhysicalAddress/zip">Lab Street and Number</span>
-
-
-
-
-	     <!--
-              26-19 FRANCIS LEWIS BLVD, FLUSHING, NY 11358
-               <span tal:content="laboratory/PhysicalAddress/address">Lab Street and Number</span>,
-              <span tal:content="laboratory/PhysicalAddress/state">Lab State</span>,
-              <span tal:content="laboratory/PhysicalAddress/zip">Lab ZIP</span>
-              -->
             </td>
           </tr>
           <tr>
@@ -156,17 +149,10 @@
               <span>&nbsp;&nbsp;</span>
               <span><b>Fax:</b> </span>
               <span tal:content="python: model.format_phone_number(laboratory['Fax'])" >(718)871-8255<</span>
-
-              <!--
-              <span i18n:translate="">Phone</span>
-              <span tal:content="laboratory/Phone">Lab Phone Number</span> &nbsp;&nbsp;&nbsp;
-              <span i18n:translate="">Fax</span>
-              <span tal:content="laboratory/Fax">Lab Fax Number</span>
-              -->
             </td>
           </tr>
           <tr>
-            <td colspan="2">
+		  <td> 
               &nbsp;
             </td>
           </tr>
@@ -189,49 +175,51 @@
       <table class="table table-sm table-condensed w-100" style="font-size:7pt;">
         <colgroup>
           <!-- Client Address -->
-          <col style="width: 33%;">
+          <col style="width: 30%;">
           <!-- Lab Address -->
-          <col style="width: 37%">
+          <col style="width: 40%">
           <!-- Accreditation Logo -->
           <col style="width: 30%">
         </colgroup>
         <tr>
           <!-- PATIENT DETAILS-->
-          <td style="width:33%;border:2px solid black;">
+          <td style="width:30%;border:2px solid black;">
             <table style="width:100%;">
               <tr>
                 <td colspan="2" style="border:none;">
-                  <div style="background-color:lightblue;"><span><b>Patient Information</b></span></div>
+                  <div style="background-color:lightblue;"><span><b>PATIENT INFORMATION</b></span></div>
                 </td>
               </tr>
               <tr>
                  <td colspan="2" style="border:none;">
-                    <span tal:content="patient/Title" style="font-weight: bold"> </span>
+                    <span tal:omit-tag="True" tal:content="patient/Surname" style="font-weight: bold"> </span>,
+                    <span tal:omit-tag="True" tal:content="patient/Firstname" style="font-weight: bold"> </span>		    
                 </td>
               </tr>
               <tr>
-                <td style="border:none;">
-                   <span><b>Age/Sex:</b></span> 
+                <td style="border:none;" colspan="2">
+                   <span><b>AGE/SEX:</b></span> 
                    <span tal:content="python: model.get_patient_age(patient.getBirthDate())">Age in years </span>
 		   
                    <span tal:content="python: patient['Gender'].title() if patient['Gender'] else ''"> </span>
 
                 </td>
-                
-                <td style="border:none;">
+	      </tr>
+	      <tr>
+                <td style="border:none;" colspan="2">
                   <span><b>DOB:</b></span>
                    <span tal:condition="python:patient.getBirthDate()" tal:content="python:model.format_the_date(patient.getBirthDate())"> Patient DoB</span>
                 </td>
               </tr>
               <tr>
                  <td colspan="2" style="border:none;">
-                   <span><b>Phone:</b></span>
+                   <span><b>PHONE:</b></span>
                    <span tal:content="python: model.format_phone_number(patient['HomePhone'])">1234567890</span>
                 </td>
               </tr>
               <tr>
                  <td colspan="2" style="border:none;">
-                   <span><b>Chart#:</b></span>
+                   <span><b>CHART#:</b></span>
                    <span tal:content="patient/ClientPatientID">Client Patient ID</span>
                 </td>
               </tr>
@@ -244,17 +232,19 @@
           </td>
           
           <!-- Physician Details -->
-          <td style="width:37%;border:2px solid black;">
+          <td style="width:40%;border:2px solid black;">
              <table style="width:100%;">
               <tr>
                 <td colspan="2" style="border:none;">
-                  <div style="background-color:lightblue;"><span><b>Physician Information</b></span></div>
+                  <div style="background-color:lightblue;"><span><b>PHYSICIAN INFORMATION</b></span></div>
                 </td>
               </tr>
               <tr>
                  <td colspan="2" style="border:none;">
-		   <span tal:content="doctor/JobTitle|Nothing" style="font-weight: bold">Dr. </span>
-                   <span tal:content="doctor/Title" style="font-weight: bold">YENFENG CHEN Physician, P.C</span>
+		   <span tal:content="doctor/Salutation|Nothing" style="font-weight: bold">Dr. </span>
+                   <span tal:content="doctor/Surname" style="font-weight: bold">YENFENG CHEN Physician, P.C</span>
+                   <span tal:omit-tag="True" tal:content="doctor/Firstname" style="font-weight: bold">YENFENG CHEN Physician, P.C</span>,		   
+		   <span tal:content="doctor/JobTitle" style="font-weight: bold">MD</span>
                 </td>
               </tr>
               <tr>
@@ -270,29 +260,26 @@
                           <span tal:content="doctor/PhysicalAddress/city">City</span>
 			 <span tal:content="doctor/PhysicalAddress/state">State</span>
                  <span tal:content="doctor/PhysicalAddress/zip">Lab Street and Number</span>
-                   <!-- 
-			   Whitestone, NY 11357
-                    -->
                    <span>&nbsp;</span>
                 </td>
               </tr>
               <tr>
-                 <td style="border:none;">
-                   <span><b>Tel#:</b></span>
+		      <td style="border:none;" colspan="2">
+                   <span><b>TEL#:</b></span>
                    <span tal:content="python: model.format_phone_number(doctor['BusinessPhone'])">(718)871-8255<</span>
                </td>
-                <td style="border:none;">
-                   <span><b>Fax#:</b></span>
+	      </tr>
+	      <tr>
+		      <td style="border:none;" colspan="2">
+                   <span><b>FAX#:</b></span>
                    <span tal:content="python: model.format_phone_number(doctor['BusinessPhone'])">(718)871-8255<</span>
 
                </td>
               </tr>
               <tr>
-                 <td style="border:none;">
-                   <span><b>Referring Physician:</b></span>
-                </td>
-                <td style="border:none;">
-                   <span>David Zhang MD</span>
+                 <td style="border:none;" colspan="2">
+                   <span><b>REFERRING PHYSICIAN:</b></span>
+                   <span>Dr. David Y. Zhang, MD</span>
                 </td>
               </tr>
             </table>
@@ -302,12 +289,12 @@
              <table style="width:100%;">
               <tr>
                 <td colspan="2" style="border:none;">
-                  <div style="background-color:lightblue;"><span><b>Specimen Information</b></span><div>
+                  <div style="background-color:lightblue;"><span><b>SPECIMEN INFORMATION</b></span><div>
                 </td>
               </tr>
               <tr>
                  <td style="border:none;">
-                   <span><b>Accession#:</b></span>
+                   <span><b>ACCESSION#:</b></span>
                 </td>
                 <td style="border:none;">
                    <span tal:content="model/getId">123456789</span>
@@ -315,7 +302,7 @@
               </tr>
               <tr>
                  <td style="border:none;">
-                   <span><b>Date Collected:</b></span>
+                   <span><b>DATE COLLECTED:</b></span>
                 </td>
                 <td style="border:none;">
                    <span tal:content="python:model.format_the_date(model.DateSampled)">11/12/2020</span>
@@ -323,7 +310,7 @@
               </tr>
               <tr>
                  <td style="border:none;">
-                   <span><b>Date Received:</b></span>
+                   <span><b>DATE RECEIVED:</b></span>
                 </td>
                 <td style="border:none;">
                    <span tal:content="python:model.format_the_date(model.DateReceived)">11/12/2020</span>
@@ -331,7 +318,7 @@
               </tr>
               <tr>
                  <td style="border:none;">
-                   <span><b>Date Reported:</b></span>
+                   <span><b>DATE REPORTED:</b></span>
                 </td>
                 <td style="border:none;">
                    <span tal:content="python:model.format_the_date(model.DatePublished) if model.DatePublished else model.format_the_date(model.get_curr_date_time())">11/12/2020</span>
@@ -441,8 +428,6 @@
                       </span>
                       <span tal:condition="not:analysis/ScientificName">
                         <span class="font-weight-normal" tal:content="analysis/title"></span>
-			<br/>
-			     <span tal:content="python: model.get_description(analysis)"></span>
                       </span>
                       <span tal:condition="analysis/ScientificName">
                         <span class="font-italic" tal:content="analysis/title"></span>
@@ -461,7 +446,7 @@
                       <span tal:content="python:'(RT)' if model.is_retest(analysis) else ''"></span>
                       <span tal:content="python:model.get_formatted_specs(analysis)">50 - 60</span>
                     </td>
-                     <td class="text-left text-muted font-italic">
+                    <td class="text-left text-muted font-italic">
                       <span class="units" tal:content="structure python:model.get_formatted_unit(analysis)"></span>
                     </td>
                     <td class="text-center align-middle">
@@ -475,11 +460,21 @@
                     </td>
                   </tr>
 
+		  <!--- Display Analysis Service description -->
+		  <tr tal:condition="python: model.get_description(analysis)">
+			  <td>
+				  &nbsp;
+			  </td>
+			  <td colspan='4'>
+				<span tal:content="python: model.get_description(analysis)"></span>
+			  </td>
+		  </tr>
+
                 </tal:analyses>
               </tbody>
               <tfoot tal:define="category_comments python:category.Comments">
                 <tr tal:condition="category_comments">
-                  <td colspan="3">
+                  <td colspan="5">
                     <div class="category_comments"
                          tal:content="category_comments">
                       Category Comments
@@ -487,7 +482,7 @@
                   </td>
                 </tr>
 		<tr tal:condition="python: model.get_category_description(category)">
-                  <td colspan="3">
+                  <td colspan="5">
                     <div style="font-size: 8pt; font-style: italic;" 
                          tal:content="python: model.get_category_description(category)">
                       Category Description 
